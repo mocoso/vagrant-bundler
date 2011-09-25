@@ -27,6 +27,9 @@ module VagrantBundlerTools
 
       def locate_gem(gem_name)
         guest_path = ssh_execute("cd /vagrant && bundle show #{gem_name}").strip
+        unless guest_path.start_with?('/vagrant/')
+          raise Errors::BundlePathOutsideVagrantDirectory.new
+        end
         host_path = guest_path.gsub(%r{^/vagrant/}, '')
         File.expand_path(host_path)
       end

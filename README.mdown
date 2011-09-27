@@ -1,0 +1,46 @@
+# Vagrant-bundler-tools
+
+This gem is a plugin for vagrant that makes it possible to interact with
+bundled gems on the guest directly from the host.
+
+For example you can open a gem bundled on your linux guest in your OSX host's
+editor.
+
+## Installation
+
+    gem install vagrant-bundler-tools
+
+## Usage
+
+To open a gem bundled on your guest in your host's editor use
+
+    vagrant bundle open <gem_name>
+
+from the host.
+
+## Other commands
+
+You can also use
+
+    vagrant bundle show <gem_name>
+
+On the host to show path (on the host) to the named gem bundled on the guest.
+
+## Caveats
+
+You will need to set the bundle path on the guest to be a subdirectory of the
+project so that the host can access it, for example with
+
+    bundle config path .bundled_gems
+
+in the project directory on the guest.
+
+## MIT License
+
+(c) Joel Chippindale 2011
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

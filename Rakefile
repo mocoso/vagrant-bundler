@@ -1,11 +1,17 @@
 require "rubygems"
 require "rubygems/package_task"
 require "rdoc/task"
-
+require 'rake/testtask'
 
 
 task :default => :package do
   puts "Don't forget to write some tests!"
+end
+
+Rake::TestTask.new do |t|
+  t.libs.push "lib"
+  t.test_files = FileList['spec/**/*_spec.rb']
+  t.verbose = true
 end
 
 # This builds the actual gem. For details of what all these options
@@ -43,6 +49,7 @@ EOF
   # If your tests use any gems, include them here
   s.add_development_dependency("rake")
   s.add_development_dependency("rdoc")
+  s.add_development_dependency("minitest")
 end
 
 # This task actually builds the gem. We also regenerate a static

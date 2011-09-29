@@ -41,7 +41,8 @@ EOF
   s.add_dependency("i18n", "~> 0.6.0")
 
   # If your tests use any gems, include them here
-  # s.add_development_dependency("mocha") # for example
+  s.add_development_dependency("rake")
+  s.add_development_dependency("rdoc")
 end
 
 # This task actually builds the gem. We also regenerate a static

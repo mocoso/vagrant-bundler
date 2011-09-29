@@ -3,6 +3,9 @@ en:
     errors:
       bundle_path_outside_vagrant_directory: |-
         The guest's bundle path must be a subdirectory of /vagrant to be accessible to the host
+
         Run
-            bundle config .bundler && bundle install
+
+            bundle config .bundled_gems && bundle install
+
         On the guest to move the bundle to a location the host can access

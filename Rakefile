@@ -29,7 +29,7 @@ spec = Gem::Specification.new do |s|
   s.email             = "joel@joelchippindale.com"
   s.homepage          = "http://github.com/mocoso/vagrant-bundler-tools"
   s.description = <<-EOF
-vagrant-bundle-tools is a vagrant plugin to make it possible to interact
+vagrant-bundler-tools is a vagrant plugin to make it possible to interact
 with the guest's bundled gems directory from the host.
 EOF
 

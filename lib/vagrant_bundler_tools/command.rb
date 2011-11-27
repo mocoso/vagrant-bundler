@@ -2,6 +2,11 @@ module VagrantBundlerTools
   class Command < Vagrant::Command::GroupBase
     register "bundle", "Commands to interact with bundled gems on guest"
 
+    desc "list", "Show all of the gems in the guest's bundle"
+    def list
+      env.ui.info ssh_execute("cd /vagrant && bundle list")
+    end
+
     desc "show GEM_NAME", "Show location of guest's bundled gem on host file system"
     def show(gem_name)
       env.ui.info locate_gem(gem_name)
@@ -24,7 +29,6 @@ module VagrantBundlerTools
     end
 
     protected
-
       def locate_gem(gem_name)
         guest_path = ssh_execute("cd /vagrant && bundle show #{gem_name}").strip
         unless guest_path.start_with?('/vagrant/')

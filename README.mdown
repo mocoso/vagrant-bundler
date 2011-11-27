@@ -22,9 +22,13 @@ from the host.
 
 You can also use
 
-    vagrant bundle show <gem_name>
+  - List bundled gems on the host
 
-On the host to show path (on the host) to the named gem bundled on the guest.
+        vagrant bundle list
+
+  - Show path (on the host) to the named gem bundled on the guest
+
+        vagrant bundle show <gem_name>
 
 ## Caveats
 

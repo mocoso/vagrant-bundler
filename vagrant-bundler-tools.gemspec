@@ -2,17 +2,17 @@
 
 Gem::Specification.new do |s|
   s.name = %q{vagrant-bundler-tools}
-  s.version = "0.0.3"
+  s.version = "0.0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Joel Chippindale}]
-  s.date = %q{2011-11-27}
+  s.date = %q{2012-02-02}
   s.description = %q{vagrant-bundler-tools is a vagrant plugin to make it possible to interact
 with the guest's bundled gems directory from the host.
 }
   s.email = %q{joel@joelchippindale.com}
   s.extra_rdoc_files = [%q{README.mdown}]
-  s.files = [%q{README.mdown}, %q{lib/vagrant_bundler_tools/command.rb}, %q{lib/vagrant_bundler_tools/errors.rb}, %q{lib/vagrant_bundler_tools.rb}, %q{lib/vagrant_init.rb}, %q{templates/locales/en.yml}]
+  s.files = [%q{README.mdown}, %q{lib/vagrant_bundler_tools}, %q{lib/vagrant_bundler_tools/command.rb}, %q{lib/vagrant_bundler_tools/errors.rb}, %q{lib/vagrant_bundler_tools.rb}, %q{lib/vagrant_init.rb}, %q{templates/locales}, %q{templates/locales/en.yml}]
   s.homepage = %q{http://github.com/mocoso/vagrant-bundler-tools}
   s.rdoc_options = [%q{--main}, %q{README.mdown}]
   s.require_paths = [%q{lib}]

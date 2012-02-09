@@ -23,7 +23,7 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "vagrant-bundler-tools"
-  s.version           = "0.0.3.1"
+  s.version           = "0.0.4"
   s.summary           = "Vagrant plugin for working with the guest's bundled gems"
   s.author            = "Joel Chippindale"
   s.email             = "joel@joelchippindale.com"

@@ -38,7 +38,7 @@ EOF
   s.rdoc_options      = %w(--main README.mdown)
 
   # Add any extra files to include in the gem
-  s.files             = %w(README.mdown) + Dir.glob("{lib,templates}/**/*")
+  s.files             = %w(README.mdown) + Dir.glob("{lib,templates}/**/*").sort
   s.require_paths     = ["lib"]
 
   # If you want to depend on other gems, add them here, along with any

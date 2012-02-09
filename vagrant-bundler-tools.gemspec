@@ -12,7 +12,7 @@ with the guest's bundled gems directory from the host.
 }
   s.email = %q{joel@joelchippindale.com}
   s.extra_rdoc_files = [%q{README.mdown}]
-  s.files = [%q{README.mdown}, %q{lib/vagrant_bundler_tools}, %q{lib/vagrant_bundler_tools/command}, %q{lib/vagrant_bundler_tools/command/base.rb}, %q{lib/vagrant_bundler_tools/command/bundle.rb}, %q{lib/vagrant_bundler_tools/command/bundle_list.rb}, %q{lib/vagrant_bundler_tools/command/bundle_open.rb}, %q{lib/vagrant_bundler_tools/command/bundle_show.rb}, %q{lib/vagrant_bundler_tools/errors.rb}, %q{lib/vagrant_bundler_tools.rb}, %q{lib/vagrant_init.rb}, %q{templates/locales}, %q{templates/locales/en.yml}]
+  s.files = [%q{README.mdown}, %q{lib/vagrant_bundler_tools}, %q{lib/vagrant_bundler_tools.rb}, %q{lib/vagrant_bundler_tools/command}, %q{lib/vagrant_bundler_tools/command/base.rb}, %q{lib/vagrant_bundler_tools/command/bundle.rb}, %q{lib/vagrant_bundler_tools/command/bundle_list.rb}, %q{lib/vagrant_bundler_tools/command/bundle_open.rb}, %q{lib/vagrant_bundler_tools/command/bundle_show.rb}, %q{lib/vagrant_bundler_tools/errors.rb}, %q{lib/vagrant_init.rb}, %q{templates/locales}, %q{templates/locales/en.yml}]
   s.homepage = %q{http://github.com/mocoso/vagrant-bundler-tools}
   s.rdoc_options = [%q{--main}, %q{README.mdown}]
   s.require_paths = [%q{lib}]

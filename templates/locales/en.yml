@@ -6,6 +6,6 @@ en:
 
         Run
 
-            bundle config .bundled_gems && bundle install
+            bundle config path .bundled_gems && bundle install
 
         On the guest to move the bundle to a location the host can access

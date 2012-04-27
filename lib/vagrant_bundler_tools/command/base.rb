@@ -3,11 +3,17 @@ module VagrantBundlerTools
     class Base < Vagrant::Command::Base
       protected
       def locate_gem(gem_name)
-        guest_path = ssh_execute("cd /vagrant && bundle show #{gem_name}").strip
-        unless guest_path.start_with?('/vagrant/')
+        bundle_show = ssh_execute("cd /vagrant && bundle show #{gem_name}").strip
+
+        if bundle_show.include?('Could not find gem')
+          raise Errors::GemNotFound.new(bundle_show)
+        end
+
+        unless bundle_show.start_with?('/vagrant/')
           raise Errors::BundlePathOutsideVagrantDirectory.new
         end
-        host_path = guest_path.gsub(%r{^/vagrant/}, '')
+
+        host_path = bundle_show.gsub(%r{^/vagrant/}, '')
         File.expand_path(host_path)
       end
 

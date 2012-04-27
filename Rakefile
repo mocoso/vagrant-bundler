@@ -22,14 +22,14 @@ end
 spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
-  s.name              = "vagrant-bundler-tools"
+  s.name              = "vagrant-bundler"
   s.version           = "0.1.0"
   s.summary           = "Vagrant plugin for working with the guest's bundled gems"
   s.author            = "Joel Chippindale"
   s.email             = "joel@joelchippindale.com"
-  s.homepage          = "http://github.com/mocoso/vagrant-bundler-tools"
+  s.homepage          = "http://github.com/mocoso/vagrant-bundler"
   s.description = <<-EOF
-vagrant-bundler-tools is a vagrant plugin to make it possible to interact
+vagrant-bundler is a vagrant plugin to make it possible to interact
 with the guest's bundled gems directory from the host.
 EOF
 

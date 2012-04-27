@@ -1,7 +1,7 @@
-module VagrantBundlerTools
+module VagrantBundler
   module Errors
     class BundlePathOutsideVagrantDirectory < Vagrant::Errors::VagrantError
-      error_key(:bundle_path_outside_vagrant_directory, "vagrant_bundler_tools.errors")
+      error_key(:bundle_path_outside_vagrant_directory, "vagrant_bundler.errors")
     end
 
     class GemNotFound < Vagrant::Errors::VagrantError

@@ -1,6 +1,6 @@
 require 'optparse'
 
-module VagrantBundlerTools
+module VagrantBundler
   module Command
     class Bundle < Base
       def initialize(argv, env)
@@ -9,9 +9,9 @@ module VagrantBundlerTools
         @main_args, @sub_command, @sub_args = split_main_and_subcommand(argv)
 
         @subcommands = Vagrant::Registry.new
-        @subcommands.register(:list)       { VagrantBundlerTools::Command::BundleList }
-        @subcommands.register(:open)       { VagrantBundlerTools::Command::BundleOpen }
-        @subcommands.register(:show)       { VagrantBundlerTools::Command::BundleShow }
+        @subcommands.register(:list)       { VagrantBundler::Command::BundleList }
+        @subcommands.register(:open)       { VagrantBundler::Command::BundleOpen }
+        @subcommands.register(:show)       { VagrantBundler::Command::BundleShow }
       end
 
       def execute

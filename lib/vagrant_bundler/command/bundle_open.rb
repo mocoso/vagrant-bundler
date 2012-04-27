@@ -1,4 +1,4 @@
-module VagrantBundlerTools
+module VagrantBundler
   module Command
     class BundleOpen < Base
       def execute

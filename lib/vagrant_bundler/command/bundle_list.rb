@@ -1,6 +1,6 @@
 require 'optparse'
 
-module VagrantBundlerTools
+module VagrantBundler
   module Command
     class BundleList < Base
       def execute

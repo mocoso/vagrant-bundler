@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "vagrant-bundler-tools"
+  s.name = "vagrant-bundler"
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Chippindale"]
   s.date = "2012-04-28"
-  s.description = "vagrant-bundler-tools is a vagrant plugin to make it possible to interact\nwith the guest's bundled gems directory from the host.\n"
+  s.description = "vagrant-bundler is a vagrant plugin to make it possible to interact\nwith the guest's bundled gems directory from the host.\n"
   s.email = "joel@joelchippindale.com"
   s.extra_rdoc_files = ["README.mdown"]
-  s.files = ["README.mdown", "lib/vagrant_bundler_tools", "lib/vagrant_bundler_tools.rb", "lib/vagrant_bundler_tools/command", "lib/vagrant_bundler_tools/command/base.rb", "lib/vagrant_bundler_tools/command/bundle.rb", "lib/vagrant_bundler_tools/command/bundle_list.rb", "lib/vagrant_bundler_tools/command/bundle_open.rb", "lib/vagrant_bundler_tools/command/bundle_show.rb", "lib/vagrant_bundler_tools/errors.rb", "lib/vagrant_init.rb", "templates/locales", "templates/locales/en.yml"]
-  s.homepage = "http://github.com/mocoso/vagrant-bundler-tools"
+  s.files = ["README.mdown", "lib/vagrant_bundler", "lib/vagrant_bundler.rb", "lib/vagrant_bundler/command", "lib/vagrant_bundler/command/base.rb", "lib/vagrant_bundler/command/bundle.rb", "lib/vagrant_bundler/command/bundle_list.rb", "lib/vagrant_bundler/command/bundle_open.rb", "lib/vagrant_bundler/command/bundle_show.rb", "lib/vagrant_bundler/errors.rb", "lib/vagrant_init.rb", "templates/locales", "templates/locales/en.yml"]
+  s.homepage = "http://github.com/mocoso/vagrant-bundler"
   s.rdoc_options = ["--main", "README.mdown"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.11"

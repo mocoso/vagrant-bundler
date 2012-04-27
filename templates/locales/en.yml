@@ -1,5 +1,5 @@
 en:
-  vagrant_bundler_tools:
+  vagrant_bundler:
     errors:
       bundle_path_outside_vagrant_directory: |-
         The guest's bundle path must be a subdirectory of /vagrant to be accessible to the host

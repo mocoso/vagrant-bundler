@@ -1,4 +1,4 @@
-module VagrantBundlerTools
+module VagrantBundler
   module Command
     class Base < Vagrant::Command::Base
       protected

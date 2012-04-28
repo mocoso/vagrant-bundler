@@ -1,17 +1,8 @@
 require "rubygems"
 require "rubygems/package_task"
-require "rdoc/task"
-require 'rake/testtask'
-
 
 task :default => :package do
   puts "Don't forget to write some tests!"
-end
-
-Rake::TestTask.new do |t|
-  t.libs.push "lib"
-  t.test_files = FileList['spec/**/*_spec.rb']
-  t.verbose = true
 end
 
 # This builds the actual gem. For details of what all these options
@@ -23,33 +14,27 @@ spec = Gem::Specification.new do |s|
 
   # Change these as appropriate
   s.name              = "vagrant-bundler-tools"
-  s.version           = "0.1.0"
+  s.version           = "0.1.1"
   s.summary           = "Vagrant plugin for working with the guest's bundled gems"
   s.author            = "Joel Chippindale"
   s.email             = "joel@joelchippindale.com"
-  s.homepage          = "http://github.com/mocoso/vagrant-bundler-tools"
+  s.homepage          = "http://github.com/mocoso/vagrant-bundler"
   s.description = <<-EOF
-vagrant-bundler-tools is a vagrant plugin to make it possible to interact
-with the guest's bundled gems directory from the host.
+vagrant-bundler-tools has been renamed vagrant-bundler, please install this
+instead.
 EOF
 
-  s.has_rdoc          = true
   s.extra_rdoc_files  = %w(README.mdown)
-  s.rdoc_options      = %w(--main README.mdown)
 
   # Add any extra files to include in the gem
-  s.files             = %w(README.mdown) + Dir.glob("{lib,templates}/**/*").sort
-  s.require_paths     = ["lib"]
+  s.files             = %w(README.mdown)
 
   # If you want to depend on other gems, add them here, along with any
   # relevant versions
-  s.add_dependency("vagrant", ">= 1.0.2")
-  s.add_dependency("i18n", ">= 0.5.0")
+  s.add_dependency("vagrant-bundler", "0.1.1")
 
   # If your tests use any gems, include them here
   s.add_development_dependency("rake")
-  s.add_development_dependency("rdoc")
-  s.add_development_dependency("minitest")
 end
 
 # This task actually builds the gem. We also regenerate a static
@@ -75,15 +60,3 @@ end
 #  - building the gem without rake (i.e. gem build blah.gemspec)
 #  - maybe others?
 task :package => :gemspec
-
-# Generate documentation
-RDoc::Task.new do |rd|
-  rd.main = "README.mdown"
-  rd.rdoc_files.include("README.mdown", "lib/**/*.rb")
-  rd.rdoc_dir = "rdoc"
-end
-
-desc 'Clear out RDoc and generated packages'
-task :clean => [:clobber_rdoc, :clobber_package] do
-  rm "#{spec.name}.gemspec"
-end

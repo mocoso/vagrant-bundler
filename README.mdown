@@ -1,43 +1,7 @@
 # Vagrant-bundler-tools
 
-This gem is a plugin for vagrant that makes it possible to interact with
-bundled gems on the guest directly from the host.
-
-For example you can open a gem bundled on your linux guest in your OSX host's
-editor.
-
-## Installation
-
-    gem install vagrant-bundler-tools
-
-## Usage
-
-To open a gem bundled on your guest in your host's editor use
-
-    vagrant bundle open <gem_name>
-
-from the host.
-
-## Other commands
-
-You can also use
-
-  - List bundled gems on the host
-
-        vagrant bundle list
-
-  - Show path (on the host) to the named gem bundled on the guest
-
-        vagrant bundle show <gem_name>
-
-## Caveats
-
-You will need to set the bundle path on the guest to be a subdirectory of the
-project so that the host can access it, for example with
-
-    bundle config path .bundled_gems
-
-in the project directory on the guest.
+This gem has been renamed vagrant-bundler, please install vagrant-bundler
+instead.
 
 ## MIT License
 

@@ -13,7 +13,7 @@ module VagrantBundlerTools
 
       def ssh_execute(command)
         output = ''
-        with_target_vms(nil, true) do |vm|
+        with_target_vms(nil, :single_target => true) do |vm|
           # Basic checks that are required for proper SSH
           raise Errors::VMNotCreatedError if !vm.created?
           raise Errors::VMInaccessible if !vm.state == :inaccessible

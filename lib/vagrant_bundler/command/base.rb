@@ -21,9 +21,9 @@ module VagrantBundler
         output = ''
         with_target_vms(nil, :single_target => true) do |vm|
           # Basic checks that are required for proper SSH
-          raise Errors::VMNotCreatedError if !vm.created?
-          raise Errors::VMInaccessible if !vm.state == :inaccessible
-          raise Errors::VMNotRunningError if vm.state != :running
+          raise Vagrant::Errors::VMNotCreatedError if !vm.created?
+          raise Vagrant::Errors::VMInaccessible if !vm.state == :inaccessible
+          raise Vagrant::Errors::VMNotRunningError if vm.state != :running
 
           vm.channel.execute(command, :error_check => false) do |type, data|
             output << data.to_s

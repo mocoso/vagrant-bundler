@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = "vagrant-bundler"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Joel Chippindale"]
-  s.date = "2012-04-28"
+  s.date = "2012-04-29"
   s.description = "vagrant-bundler is a vagrant plugin to make it possible to interact\nwith the guest's bundled gems directory from the host.\n"
   s.email = "joel@joelchippindale.com"
   s.extra_rdoc_files = ["README.mdown"]
